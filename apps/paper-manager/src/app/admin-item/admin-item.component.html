@@ -1,0 +1,8 @@
+<div class="admin-item">
+  <p>{{ admin.name }} {{ admin.surname }}</p>
+  <p>{{ admin.email }}</p>
+  <p>{{ admin.city }}</p>
+  <div class="socials-box">
+    <span *ngFor="let social of admin.socials">{{ social }}</span>
+  </div>
+</div>

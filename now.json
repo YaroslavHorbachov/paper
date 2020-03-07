@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "paper",
+  "builds": [
+    { "src": "/dist/apps/api/main.js", "use": "@now/node" },
+    { "src": "/dist/apps/paper-manager/*", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/dist/apps/api/main.js" },
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/dist/apps/paper-manager/assets/$1" },
+    { "src": "/(.*).(js|css|ico)", "dest": "/dist/apps/paper-manager/$1.$2" },
+    { "src": "/(.*)", "dest": "/dist/apps/paper-manager/index.html" }
+  ]
+}

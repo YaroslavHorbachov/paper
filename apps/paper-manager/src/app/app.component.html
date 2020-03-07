@@ -1,11 +1,7 @@
 <div style="text-align:center">
   <img
-    width="450"
+    width="200"
     src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
   />
-</div>
-<div class="admin-item" *ngFor="let admin of admins$ | async as adminUser">
-  <p>{{ admin.name }} {{ admin.surname }}</p>
-  <p>{{ admin.email }}</p>
-  <p>{{ admin.city }}</p>
+  <paper-admin-list></paper-admin-list>
 </div>
