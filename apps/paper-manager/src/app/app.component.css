@@ -131,3 +131,17 @@ summary {
   width: 16px;
   margin-right: 4px;
 }
+
+.admin-item {
+  color: black;
+  border: solid 2px black;
+  border-radius: 13%;
+  margin: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 79, 121, 0.4906337535014006) 45%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  box-shadow: 0 0 15px rgb(2, 0, 36);
+}

@@ -1,8 +1,11 @@
 <div style="text-align:center">
-  <h1>Welcome to paper-manager!</h1>
   <img
     width="450"
     src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
   />
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+<div class="admin-item" *ngFor="let admin of admins$ | async as adminUser">
+  <p>{{ admin.name }} {{ admin.surname }}</p>
+  <p>{{ admin.email }}</p>
+  <p>{{ admin.city }}</p>
+</div>

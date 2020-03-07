@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@paper/api-interfaces';
+import { IMessage } from '@paper/api-interfaces';
 
 @Injectable()
 export class AppService {
-  getData(): Message {
+  getData(): IMessage {
     return { message: 'Welcome to api!' };
   }
 }

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@paper/api-interfaces';
-
+import { IAdmin } from '@paper/api-interfaces';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'paper-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient) {}
+
+  admins$ = this.http.get<IAdmin>('/api/paper-admin/admins');
 }
